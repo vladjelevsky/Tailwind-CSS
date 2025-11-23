@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти - WebStudio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/523c65d627.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#34547A',
+                        secondary: '#EEEFF1',
+                        text: '#727272'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-roboto bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white py-4 md:py-6 sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-5 flex justify-between items-center">
+            <a href="../index.html" class="text-xl font-bold text-primary">WebStudio</a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:block">
+                <ul class="flex gap-8">
+                    <li><a href="../index.html" class="text-black hover:text-primary transition-colors">ГОЛОВНА</a></li>
+                    <li><a href="about.html" class="text-black hover:text-primary transition-colors">ПРО АВТОРА</a></li>
+                    <li><a href="portfolio.html" class="text-black hover:text-primary transition-colors">РОБОТИ</a></li>
+                    <li><a href="process.html" class="text-black hover:text-primary transition-colors">ПРОЦЕС</a></li>
+                    <li><a href="contact.html" class="text-black hover:text-primary transition-colors font-medium">КОНТАКТИ</a></li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Navigation -->
+            <div class="md:hidden">
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </label>
+                <div class="nav-mobile">
+                    <ul class="flex flex-col gap-6">
+                        <li><a href="../index.html" class="text-black text-lg">ГОЛОВНА</a></li>
+                        <li><a href="about.html" class="text-black text-lg">ПРО АВТОРА</a></li>
+                        <li><a href="portfolio.html" class="text-black text-lg">РОБОТИ</a></li>
+                        <li><a href="process.html" class="text-black text-lg">ПРОЦЕС</a></li>
+                        <li><a href="contact.html" class="text-black font-medium text-lg">КОНТАКТИ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-primary py-16 md:py-24 text-white">
+        <div class="container mx-auto px-5 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Зв'яжіться зі мною</h1>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto opacity-90">
+                Готовий обговорити ваш проект і запропонувати оптимальне рішення. Відповідаю швидко!
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-5">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-8 text-gray-800">Напишіть мені</h2>
+                    <form class="space-y-6" id="contact-form">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Ім'я *</label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name"
+                                    required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                                    placeholder="Ваше ім'я"
+                                >
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email"
+                                    required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                                    placeholder="your@email.com"
+                                >
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Тема *</label>
+                            <input 
+                                type="text" 
+                                id="subject" 
+                                name="subject"
+                                required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                                placeholder="Тема повідомлення"
+                            >
+                        </div>
+                        
+                        <div>
+                            <label for="budget" class="block text-sm font-medium text-gray-700 mb-2">Бюджет проекту</label>
+                            <select 
+                                id="budget" 
+                                name="budget"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                            >
+                                <option value="">Оберіть бюджет</option>
+                                <option value="500-1000">500$ - 1,000$</option>
+                                <option value="1000-5000">1,000$ - 5,000$</option>
+                                <option value="5000-10000">5,000$ - 10,000$</option>
+                                <option value="10000+">10,000$+</option>
+                                <option value="discuss">Потрібна консультація</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Повідомлення *</label>
+                            <textarea 
+                                id="message" 
+                                name="message"
+                                rows="6"
+                                required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                                placeholder="Опишіть ваш проект або задайте питання..."
+                            ></textarea>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <input 
+                                type="checkbox" 
+                                id="agree"
+                                name="agree"
+                                required
+                                class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
+                            >
+                            <label for="agree" class="ml-2 text-sm text-gray-600">
+                                Я погоджуюсь з обробкою персональних даних
+                            </label>
+                        </div>
+                        
+                        <button 
+                            type="submit"
+                            class="w-full bg-primary text-white py-4 px-6 rounded-lg hover:bg-blue-700 transition-colors font-medium text-lg flex items-center justify-center gap-2"
+                        >
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Надіслати повідомлення
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="lg:pl-12">
+                    <h2 class="text-3xl font-bold mb-8 text-gray-800">Контактна інформація</h2>
+                    
+                    <!-- Contact Cards -->
+                    <div class="space-y-6 mb-12">
+                        <div class="flex items-start gap-4 p-6 bg-secondary rounded-xl hover:shadow-lg transition-shadow">
+                            <div class="bg-primary text-white p-3 rounded-full">
+                                <i class="fa-solid fa-phone text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Телефон</h3>
+                                <p class="text-text mb-1">+380 (99) 123-45-67</p>
+                                <p class="text-sm text-text">Пн-Пт: 9:00 - 18:00</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4 p-6 bg-secondary rounded-xl hover:shadow-lg transition-shadow">
+                            <div class="bg-primary text-white p-3 rounded-full">
+                                <i class="fa-solid fa-envelope text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Email</h3>
+                                <p class="text-text mb-1">hello@webstudio.com</p>
+                                <p class="text-sm text-text">Відповідаю протягом 24 годин</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4 p-6 bg-secondary rounded-xl hover:shadow-lg transition-shadow">
+                            <div class="bg-primary text-white p-3 rounded-full">
+                                <i class="fa-solid fa-location-dot text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Адреса</h3>
+                                <p class="text-text mb-1">м. Київ, вул. Хрещатик, буд. 25</p>
+                                <p class="text-sm text-text">Працюю віддалено по всьому світу</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="mb-12">
+                        <h3 class="text-xl font-bold mb-6 text-gray-800">Соціальні мережі</h3>
+                        <div class="flex gap-4">
+                            <a href="#" class="bg-primary text-white p-4 rounded-full hover:bg-blue-700 transition-colors">
+                                <i class="fa-brands fa-telegram text-xl"></i>
+                            </a>
+                            <a href="#" class="bg-primary text-white p-4 rounded-full hover:bg-blue-700 transition-colors">
+                                <i class="fa-brands fa-whatsapp text-xl"></i>
+                            </a>
+                            <a href="#" class="bg-primary text-white p-4 rounded-full hover:bg-blue-700 transition-colors">
+                                <i class="fa-brands fa-github text-xl"></i>
+                            </a>
+                            <a href="#" class="bg-primary text-white p-4 rounded-full hover:bg-blue-700 transition-colors">
+                                <i class="fa-brands fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="bg-primary text-white p-4 rounded-full hover:bg-blue-700 transition-colors">
+                                <i class="fa-brands fa-behance text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Quick Links -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-6 text-gray-800">Поширені питання</h3>
+                        <div class="space-y-3">
+                            <a href="process.html#faq" class="flex items-center justify-between p-4 bg-secondary rounded-lg hover:shadow-md transition-all group">
+                                <span class="text-text group-hover:text-primary">Скільки коштує розробка сайту?</span>
+                                <i class="fa-solid fa-chevron-right text-text group-hover:text-primary"></i>
+                            </a>
+                            <a href="process.html#faq" class="flex items-center justify-between p-4 bg-secondary rounded-lg hover:shadow-md transition-all group">
+                                <span class="text-text group-hover:text-primary">Який термін розробки?</span>
+                                <i class="fa-solid fa-chevron-right text-text group-hover:text-primary"></i>
+                            </a>
+                            <a href="process.html#faq" class="flex items-center justify-between p-4 bg-secondary rounded-lg hover:shadow-md transition-all group">
+                                <span class="text-text group-hover:text-primary">Чи надаєте ви підтримку?</span>
+                                <i class="fa-solid fa-chevron-right text-text group-hover:text-primary"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-5">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">Де мене знайти</h2>
+                <p class="text-lg text-text max-w-2xl mx-auto">
+                    Працюю віддалено з клієнтами по всьому світу, але якщо ви в Києві - можемо зустрітися за кавою
+                </p>
+            </div>
+            
+            <div class="bg-white rounded-2xl overflow-hidden shadow-2xl">
+                <div class="h-96 bg-gradient-to-br from-blue-400 to-purple-500 relative">
+                    <!-- Mock Map -->
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i class="fa-solid fa-map text-6xl mb-4 opacity-50"></i>
+                            <p class="text-xl font-bold">Інтерактивна карта</p>
+                            <p class="opacity-80">м. Київ, вул. Хрещатик, буд. 25</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Map Marker -->
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                        <div class="bg-red-500 text-white p-3 rounded-full shadow-lg animate-pulse">
+                            <i class="fa-solid fa-location-dot text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-5">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">Поширені питання</h2>
+                <p class="text-lg text-text max-w-3xl mx-auto">
+                    Швидкі відповіді на найпопулярніші питання від клієнтів
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-secondary p-8 rounded-2xl hover:shadow-lg transition-shadow">
+                    <div class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center text-lg mb-4">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Скільки часу займає відповідь?</h3>
+                    <p class="text-text">
+                        Відповідаю на всі повідомлення протягом 24 годин у робочі дні. 
+                        У вихідні час відповіді може становити до 48 годин.
+                    </p>
+                </div>
+
+                <div class="bg-secondary p-8 rounded-2xl hover:shadow-lg transition-shadow">
+                    <div class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center text-lg mb-4">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Як відбувається оплата?</h3>
+                    <p class="text-text">
+                        Працюю за передоплатою 30-50% залежно від проекту. 
+                        Приймаю банківські перекази та онлайн платежі.
+                    </p>
+                </div>
+
+                <div class="bg-secondary p-8 rounded-2xl hover:shadow-lg transition-shadow">
+                    <div class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center text-lg mb-4">
+                        <i class="fa-solid fa-calendar"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Чи можемо ми зустрітися особисто?</h3>
+                    <p class="text-text">
+                        Так, якщо ви знаходитесь у Києві. Проводжу зустрічі в центрі міста. 
+                        Для віддалених клієнтів доступні відеоконференції.
+                    </p>
+                </div>
+
+                <div class="bg-secondary p-8 rounded-2xl hover:shadow-lg transition-shadow">
+                    <div class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center text-lg mb-4">
+                        <i class="fa-solid fa-file-contract"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Чи укладаєте ви договір?</h3>
+                    <p class="text-text">
+                        Так, на всі проекти укладаю офіційний договір із прописаними термінами, 
+                        вартістю та гарантіями.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 md:py-24 bg-primary text-white">
+        <div class="container mx-auto px-5 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Почнемо ваш проект сьогодні?</h2>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8 opacity-90">
+                Зв'яжіться зі мною для безкоштовної консультації та розрахунку вартості вашого проекту
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:+380991234567" class="inline-block bg-white text-primary px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium text-lg">
+                    <i class="fa-solid fa-phone mr-2"></i>Зателефонувати
+                </a>
+                <a href="mailto:hello@webstudio.com" class="inline-block border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-primary transition-colors font-medium text-lg">
+                    <i class="fa-solid fa-envelope mr-2"></i>Написати на email
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-8 md:py-12 text-white">
+        <div class="container mx-auto px-5">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <p class="text-xl md:text-2xl font-bold mb-2">Іванов Іван</p>
+                    <p class="text-sm opacity-80">Веб-розробник & Дизайнер</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="bg-white/20 p-3 rounded-full hover:bg-white/30 transition-colors">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+                    <a href="#" class="bg-white/20 p-3 rounded-full hover:bg-white/30 transition-colors">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#" class="bg-white/20 p-3 rounded-full hover:bg-white/30 transition-colors">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-white/20 mt-8 pt-8 text-center md:text-left">
+                <p class="text-sm opacity-80">&copy; 2024 WebStudio. Всі права захищені.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Contact Form Handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contact-form');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(this);
+                const name = formData.get('name');
+                const email = formData.get('email');
+                const subject = formData.get('subject');
+                const message = formData.get('message');
+                
+                // Simple validation
+                if (!name || !email || !subject || !message) {
+                    alert('Будь ласка, заповніть всі обов\'язкові поля');
+                    return;
+                }
+                
+                // Here you would typically send the data to a server
+                // For demo purposes, we'll just show a success message
+                
+                // Show success message
+                const button = this.querySelector('button[type="submit"]');
+                const originalText = button.innerHTML;
+                
+                button.innerHTML = '<i class="fa-solid fa-check"></i> Повідомлення надіслано!';
+                button.classList.remove('bg-primary', 'hover:bg-blue-700');
+                button.classList.add('bg-green-500', 'hover:bg-green-600');
+                button.disabled = true;
+                
+                // Reset form after 3 seconds
+                setTimeout(() => {
+                    contactForm.reset();
+                    button.innerHTML = originalText;
+                    button.classList.remove('bg-green-500', 'hover:bg-green-600');
+                    button.classList.add('bg-primary', 'hover:bg-blue-700');
+                    button.disabled = false;
+                }, 3000);
+            });
+        });
+    </script>
+</body>
+</html>
